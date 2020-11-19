@@ -1,40 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nle-biha <nle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/18 23:38:25 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/19 21:03:22 by nle-biha         ###   ########.fr       */
+/*   Created: 2020/11/19 21:02:46 by nle-biha          #+#    #+#             */
+/*   Updated: 2020/11/19 21:09:55 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+void	*calloc(size_t nmemb, size_t size)
 {
-	long long int	sign;
-	long long int	ret;
-	int		i;
+	char *ret;
+	unsigned int i;
 
 	i = 0;
-	sign = 1;
-	ret = 0;
-	while (nptr[i] == '\t' || nptr[i] == '\n' ||nptr[i] == '\r' || nptr[i] == '\v' ||
-			nptr[i] == '\f' || nptr[i] == ' ')
-		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+	if ((ret = (char *)malloc(nmemb * size)) == NULL)
+		return (NULL);
+	while (i < nmemb * size)
 	{
-	       	if (nptr[i] == '-')
-			sign = -1;
+		ret[i] = '\0';
 		i++;
 	}
-	while (nptr[i] && nptr[i] >= '0' && nptri[i] <= '9')
-	{
-		ret = ret * 10 + (str[i] - '0');
-		i++;
-	}
-	ret *= sign;
-	return ((int)result);
+	return ((void *)ret);
 }

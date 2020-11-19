@@ -1,40 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nle-biha <nle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/18 23:38:25 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/19 21:03:22 by nle-biha         ###   ########.fr       */
+/*   Created: 2020/11/19 21:17:22 by nle-biha          #+#    #+#             */
+/*   Updated: 2020/11/19 21:48:18 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	long long int	sign;
-	long long int	ret;
-	int		i;
+	char *dstcpy;
+	char *srccpy;
+	size_t i;
 
 	i = 0;
-	sign = 1;
-	ret = 0;
-	while (nptr[i] == '\t' || nptr[i] == '\n' ||nptr[i] == '\r' || nptr[i] == '\v' ||
-			nptr[i] == '\f' || nptr[i] == ' ')
-		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
+	dstcpy = (char *)dst;
+	srccpy = (char *)src;
+	if (dstcpy > srccpy)
 	{
-	       	if (nptr[i] == '-')
-			sign = -1;
-		i++;
+		while (n > 0)
+		{
+			dst[n - 1] = src[n - 1];
+			n--;
+		}
 	}
-	while (nptr[i] && nptr[i] >= '0' && nptri[i] <= '9')
+	else
 	{
-		ret = ret * 10 + (str[i] - '0');
-		i++;
+		while (i < n - 1)
+		{
+			dst[i] = src[i];
+			i++;
+		}
 	}
-	ret *= sign;
-	return ((int)result);
 }

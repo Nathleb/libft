@@ -1,40 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nle-biha <nle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/18 23:38:25 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/19 21:03:22 by nle-biha         ###   ########.fr       */
+/*   Created: 2020/11/19 21:10:19 by nle-biha          #+#    #+#             */
+/*   Updated: 2020/11/19 21:16:49 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+char	*ft_strdup(const char *s)
 {
-	long long int	sign;
-	long long int	ret;
-	int		i;
+	size_t		len;
+	char		*ret;
+	unsigned int	i;
 
 	i = 0;
-	sign = 1;
-	ret = 0;
-	while (nptr[i] == '\t' || nptr[i] == '\n' ||nptr[i] == '\r' || nptr[i] == '\v' ||
-			nptr[i] == '\f' || nptr[i] == ' ')
-		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
+	len = ft_strlen(s);
+	ret = (char *)malloc(sizeof(char) * (len + 1));
+	if (ret == NULL)
+		return (NULL);
+	while (s[i])
 	{
-	       	if (nptr[i] == '-')
-			sign = -1;
+		ret[i] = s[i];
 		i++;
 	}
-	while (nptr[i] && nptr[i] >= '0' && nptri[i] <= '9')
-	{
-		ret = ret * 10 + (str[i] - '0');
-		i++;
-	}
-	ret *= sign;
-	return ((int)result);
+	ret[i] = '\0';
+	return (ret);
 }
