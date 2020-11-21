@@ -6,13 +6,13 @@
 /*   By: nle-biha <nle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 22:30:27 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/19 22:45:43 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/21 20:43:28 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	lens1;
 	size_t	lens2;

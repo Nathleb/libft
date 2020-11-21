@@ -6,22 +6,24 @@
 /*   By: nle-biha <nle-lebiha@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 22:02:04 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/18 22:15:31 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/21 21:00:33 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void	*dest, const void *src, size_t n)
+#include "libft.h"
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char *destcpy;
 	unsigned char *srccpy;
 
-	destcpy = (unsigned char *)dest;
-	srccpy = (unsigned char *)src;
+	destcpy = (unsigned char*)dest;
+	srccpy = (unsigned char*)src;
 	if (dest == NULL || src == NULL)
-		return  (NULL);
+		return (NULL);
 	while (n > 0)
 	{
-		*destcpy = *srccpy; 
+		*destcpy = *srccpy;
 		destcpy++;
 		srccpy++;
 		n--;

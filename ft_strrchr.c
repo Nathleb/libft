@@ -6,9 +6,11 @@
 /*   By: nle-biha <nle-lebiha@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 22:10:36 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/18 22:10:54 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/21 20:43:00 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -20,7 +22,7 @@ char	*ft_strrchr(const char *s, int c)
 	while (i > 0)
 	{
 		if (s[i] == c)
-			return(s);
+			return (s);
 		i--;
 	}
 	return (NULL);

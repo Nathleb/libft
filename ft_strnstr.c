@@ -6,11 +6,11 @@
 /*   By: nle-biha <nle-lebiha@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 22:45:04 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/19 21:49:07 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/21 21:07:19 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" 
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -26,7 +26,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	while (big[i] && i < len)
 	{
 		j = 0;
-		while (little[j] == big [i + j] && i + j < len && little[j])
+		while (little[j] == big[i + j] && i + j < len && little[j])
 			j++;
 		if (!little[j])
 			return ((char *)big + i);

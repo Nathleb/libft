@@ -6,7 +6,7 @@
 /*   By: nle-biha <nle-lebiha@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 22:18:33 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/21 17:05:18 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/21 20:41:07 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *s)
 	size_t ret;
 
 	ret = 0;
-	while(s[ret])
+	while (s[ret])
 		ret++;
 	return (ret);
 }

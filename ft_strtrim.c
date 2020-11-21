@@ -6,7 +6,7 @@
 /*   By: nle-biha <nle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 16:14:40 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/21 17:25:31 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/21 20:49:37 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	len;
 	char	*ret;
 	size_t	i;
-	size_t j;
+	size_t	j;
 
 	j = 0;
 	i = 0;
