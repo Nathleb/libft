@@ -6,9 +6,11 @@
 /*   By: nle-biha <nle-lebiha@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 22:11:15 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/18 22:11:17 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/22 20:47:26 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {

@@ -6,18 +6,18 @@
 /*   By: nle-biha <nle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 19:13:42 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/22 20:25:31 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/22 20:54:59 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s,int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
 	while (*s)
 	{
 		write(fd, s, 1);
 		s++;
 	}
-	ft_putchar_fd('\n',fd);
+	ft_putchar_fd('\n', fd);
 }
