@@ -6,7 +6,7 @@
 /*   By: nle-biha <nle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 21:02:46 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/21 22:28:18 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/22 16:27:58 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void			*ft_calloc(size_t nmemb, size_t size)
 {
-	char		*ret;
+	char			*ret;
 	unsigned int	i;
 
 	i = 0;

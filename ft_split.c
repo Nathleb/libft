@@ -6,7 +6,7 @@
 /*   By: nle-biha <nle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 17:27:45 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/21 22:33:22 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/22 18:45:40 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,18 @@ unsigned int	ft_nbrwrd(char const *s, char c)
 	return (nbrwrd);
 }
 
-int		ft_free_split(char ***ret, unsigned int j)
+int				ft_free_split(char **ret, unsigned int j)
 {
 	while (j > 0)
 	{
-		free((*ret)[j]);
+		free((ret)[j]);
 		j--;
 	}
-	free(*ret);
+	free(ret);
 	return (0);
 }
 
-int		ft_sub_split(char ***ret, char const *s, char c, unsigned int nbrwrd)
+int				ft_sub_split(char **ret, char const *s, char c, unsigned int n)
 {
 	unsigned int	i;
 	unsigned int	j;
@@ -50,7 +50,7 @@ int		ft_sub_split(char ***ret, char const *s, char c, unsigned int nbrwrd)
 
 	i = 0;
 	j = 0;
-	while (j < nbrwrd)
+	while (j < n)
 	{
 		lenwrd = 0;
 		while (s[i] && s[i] == c)
@@ -60,18 +60,18 @@ int		ft_sub_split(char ***ret, char const *s, char c, unsigned int nbrwrd)
 			i++;
 			lenwrd++;
 		}
-		if (((*ret)[j] = ft_substr(s, i - lenwrd, lenwrd)) == NULL)
+		if ((ret[j] = ft_substr(s, i - lenwrd, lenwrd)) == NULL)
 			return (ft_free_split(ret, j));
 		j++;
 	}
-	(*ret)[j] = NULL;
+	ret[j] = NULL;
 	return (1);
 }
 
-char		**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	unsigned int	nbrwrd;
-	char		**ret;
+	char			**ret;
 
 	nbrwrd = ft_nbrwrd(s, c);
 	if ((ret = (char **)malloc(sizeof(char *) * (nbrwrd + 1))) == NULL)

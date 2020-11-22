@@ -6,7 +6,7 @@
 /*   By: nle-biha <nle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 23:38:25 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/21 21:05:33 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/22 17:07:04 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_atoi(const char *nptr)
 {
 	long long int	sign;
 	long long int	ret;
-	int		i;
+	unsigned int	i;
 
 	i = 0;
 	sign = 1;
