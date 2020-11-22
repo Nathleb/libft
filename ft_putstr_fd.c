@@ -6,7 +6,7 @@
 /*   By: nle-biha <nle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 19:06:00 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/22 19:11:52 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/22 20:25:46 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	while (*s)
 	{
-		write(fd, s, 1)
+		write(fd, s, 1);
 		s++;
 	}
 }
