@@ -6,13 +6,13 @@
 /*   By: nle-biha <nle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 16:56:19 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/23 17:05:03 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/23 21:38:15 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list ** alst, t_list *new)
+void	ft_lstadd_back(t_list **alst, t_list *new)
 {
 	if (*alst == NULL && new)
 	{
@@ -23,5 +23,5 @@ void	ft_lstadd_back(t_list ** alst, t_list *new)
 	{
 		ft_lstlast(*alst)->next = new;
 		new->next = NULL;
-	}	
+	}
 }

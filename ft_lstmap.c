@@ -6,7 +6,7 @@
 /*   By: nle-biha <nle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 20:47:37 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/23 21:01:07 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/23 21:27:23 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,23 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
+	t_list *ret;
+	t_list new;
 
+	if (lst == NULL)
+		return (NULL);
+	if ((ret = ft_lstnew((*f)(lst->content))) == NULL)
+		return (NULL);
+	lst = lst->next;
+	while (lst)
+	{
+		if ((new = ft_lstnew((*f)(lst->content))) == NULL)
+		{
+			ft_lstclear(&ret, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&ret, new);
+		lst = lst->next;
+	}
+	return (ret);
 }
