@@ -6,13 +6,13 @@
 /*   By: nle-biha <nle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 22:03:42 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/19 22:20:15 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/25 18:00:34 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	*memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char *s1cpy;
 	unsigned char *s2cpy;

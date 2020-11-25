@@ -6,9 +6,11 @@
 /*   By: nle-biha <nle-lebiha@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 22:01:51 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/18 22:01:53 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/25 17:48:09 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
@@ -16,12 +18,11 @@ void	ft_bzero(void *s, size_t n)
 
 	count = (int *)s;
 	if (s == NULL)
-		return (NULL);
+		return ;
 	while (n > 0)
 	{
 		*count = 0;
 		count++;
 		n--;
 	}
-	return (s);
 }

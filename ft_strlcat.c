@@ -6,9 +6,11 @@
 /*   By: nle-biha <nle-lebiha@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 22:35:17 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/18 22:42:35 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/25 17:46:49 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -26,6 +28,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[lendst + i] = src[i];
 		i++;
 	}
-	dst[lendst + i] = '/0';
+	dst[lendst + i] = '\0';
 	return (lensrc + lendst);
 }

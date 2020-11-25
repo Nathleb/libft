@@ -6,9 +6,11 @@
 /*   By: nle-biha <nle-lebiha@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 22:04:54 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/21 21:08:28 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/25 17:58:43 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
@@ -28,4 +30,5 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	}
 	if (n == 0)
 		return (NULL);
+	return ((void *)destcpy);
 }

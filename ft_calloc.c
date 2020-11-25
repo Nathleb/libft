@@ -6,7 +6,7 @@
 /*   By: nle-biha <nle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 21:02:46 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/22 16:27:58 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/25 17:53:16 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void			*ft_calloc(size_t nmemb, size_t size)
 
 	i = 0;
 	if (nmemb == 0 || size == 0)
-		return (null);
-	if ((ret = (char *)malloc(nmemb * size)) == null)
-		return (null);
+		return (NULL);
+	if ((ret = (char *)malloc(nmemb * size)) == NULL)
+		return (NULL);
 	while (i < nmemb * size)
 	{
 		ret[i] = '\0';
