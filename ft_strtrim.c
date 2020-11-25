@@ -6,7 +6,7 @@
 /*   By: nle-biha <nle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 16:14:40 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/21 20:49:37 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/25 23:15:59 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 		j++;
 	}
-	ret[i] = '\0';
+	ret[j] = '\0';
 	return (ret);
 }
