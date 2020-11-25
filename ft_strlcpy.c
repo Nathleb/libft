@@ -6,18 +6,20 @@
 /*   By: nle-biha <nle-lebiha@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 22:23:27 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/25 17:51:51 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/25 18:50:44 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	unsigned int i;
-	unsigned int lensrc;
+	size_t i;
+	size_t lensrc;
 
-	lensrc = ft_strlen(src);
+	lensrc = 0;
+	while (src[lensrc])
+		lensrc++;
 	i = 0;
 	if (size == 0)
 		return (lensrc);

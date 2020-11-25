@@ -6,7 +6,7 @@
 /*   By: nle-biha <nle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 23:38:25 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/25 17:41:57 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/25 18:24:56 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,4 @@ int	ft_atoi(const char *nptr)
 	}
 	ret *= sign;
 	return ((int)ret);
-}
-
-int main ()
-{
-
 }

@@ -6,13 +6,13 @@
 /*   By: nle-biha <nle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 21:02:46 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/25 17:53:16 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/25 18:26:29 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			*ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	char			*ret;
 	unsigned int	i;
