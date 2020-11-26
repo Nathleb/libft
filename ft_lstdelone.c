@@ -6,7 +6,7 @@
 /*   By: nle-biha <nle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 17:07:22 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/23 17:12:35 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/26 17:26:34 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
 	if (lst)
 	{
-		(*del)(lst->content);
+		if (del)
+			(*del)(lst->content);
 		free(lst);
 	}
 }
