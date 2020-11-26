@@ -6,7 +6,7 @@
 /*   By: nle-biha <nle-lebiha@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 22:23:27 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/25 18:50:44 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/26 17:20:23 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t lensrc;
 
 	lensrc = 0;
+	if (!dst && !src)
+		return (NULL);
 	while (src[lensrc])
 		lensrc++;
 	i = 0;
