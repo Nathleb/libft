@@ -6,7 +6,7 @@
 /*   By: nle-biha <nle-lebiha@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 22:35:17 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/25 17:46:49 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/26 02:38:25 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	lensrc = ft_strlen(src);
 	i = 0;
 	if (size <= lendst)
-		return (lensrc + lendst);
+		return (lensrc + size);
 	while (i + lendst < size - 1 && src[i] != 0)
 	{
 		dst[lendst + i] = src[i];
