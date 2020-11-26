@@ -6,7 +6,7 @@
 /*   By: nle-biha <nle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 21:17:22 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/25 18:03:33 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/26 15:45:39 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	}
 	else
 	{
-		while (i < n - 1)
+		while (i < n)
 		{
 			dstcpy[i] = srccpy[i];
 			i++;
