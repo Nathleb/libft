@@ -6,7 +6,7 @@
 /*   By: nle-biha <nle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 16:14:40 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/25 23:15:59 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/26 01:37:13 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,21 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*ret;
 	size_t	i;
 	size_t	j;
+	size_t newlen;
 
 	j = 0;
 	i = 0;
+	newlen = 1;
+	if (!s1 || !set)
+		return (NULL);
 	len = ft_strlen(s1);
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
 	while (len > 0 && ft_strchr(set, s1[len - 1]))
 		len--;
-	if ((ret = (char *)malloc(len - i + 1)) == NULL)
+	if (len > i)
+		newlen += len - i;
+	if ((ret = (char *)malloc(newlen)) == NULL)
 		return (NULL);
 	while (i < len)
 	{
