@@ -6,7 +6,7 @@
 /*   By: nle-biha <nle-lebiha@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 22:02:04 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/26 16:44:58 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/26 17:10:12 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	destcpy = (unsigned char*)dest;
 	srccpy = (unsigned char*)src;
+	if (!dst && !src)
+		return (NULL);
 	while (n > 0)
 	{
 		*destcpy = *srccpy;
