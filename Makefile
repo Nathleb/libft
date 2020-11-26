@@ -6,7 +6,7 @@
 #    By: nle-biha <nle-biha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/25 16:53:43 by nle-biha          #+#    #+#              #
-#    Updated: 2020/11/26 16:14:50 by nle-biha         ###   ########.fr        #
+#    Updated: 2020/11/26 18:12:58 by nle-biha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ CFLAGS = -Wall -Wextra -Werror
 .c.o:
 		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
-${NAME}: ${OBJS}
+$(NAME): ${OBJS}
 		ar rcs ${NAME} ${OBJS}
 
 bonus:	${OBJS} ${OBJSBONUS}
