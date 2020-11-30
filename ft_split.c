@@ -6,7 +6,7 @@
 /*   By: nle-biha <nle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 17:27:45 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/25 18:01:34 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/30 02:19:45 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,8 @@ char			**ft_split(char const *s, char c)
 	unsigned int	nbrwrd;
 	char			**ret;
 
+	if (!s)
+		return(NULL);
 	nbrwrd = ft_nbrwrd(s, c);
 	if ((ret = (char **)malloc(sizeof(char *) * (nbrwrd + 1))) == NULL)
 		return (NULL);
