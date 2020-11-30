@@ -6,7 +6,7 @@
 /*   By: nle-biha <nle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 17:27:45 by nle-biha          #+#    #+#             */
-/*   Updated: 2020/11/30 02:46:08 by nle-biha         ###   ########.fr       */
+/*   Updated: 2020/11/30 19:22:26 by nle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,8 @@ unsigned int	ft_nbrwrd(char const *s, char c)
 
 int				ft_free_split(char **ret, unsigned int j)
 {
-	while (j > 0)
-	{
+	while (--j >= 0)
 		free((ret)[j]);
-		j--;
-	}
 	free(ret);
 	return (0);
 }
