@@ -33,8 +33,11 @@ unsigned int	ft_nbrwrd(char const *s, char c)
 
 int				ft_free_split(char **ret, unsigned int j)
 {
-	while (--j >= 0)
-		free((ret)[j]);
+	int i;
+	
+	i = (int)j;
+	while (--i >= 0)
+		free((ret)[i]);
 	free(ret);
 	return (0);
 }
